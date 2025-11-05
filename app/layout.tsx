@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
@@ -39,6 +40,8 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <GoogleTagManager gtmId="GTM-MM5PWB94" />
+        <GoogleAnalytics gaId="G-M6HMK9JLLG" />
         <Footer />
         <CookieConsent />
         <Analytics />
